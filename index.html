@@ -13,9 +13,10 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
     body { font-family: 'Poppins', sans-serif; }
-    .hero-bg { 
+    .hero-bg {
       background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('http://static.photos/food/1200x630/42');
-      background-size: cover; background-position: center; 
+      background-size: cover;
+      background-position: center;
     }
     .dish-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
     .testimonial-card { transition: all 0.3s ease; }
@@ -24,10 +25,10 @@
   </style>
 </head>
 <body class="scroll-smooth">
-
 <div class="container mx-auto px-4 sm:px-6 md:px-8">
+  
 
-<!-- Navbar -->
+<!-- Navigation -->
 <nav class="bg-orange-600 text-white sticky top-0 z-50 shadow-lg animate__animated animate__fadeInDown">
   <div class="container mx-auto px-4 py-3 flex justify-between items-center">
     <div class="flex items-center space-x-2">
@@ -45,11 +46,15 @@
       <a href="faq.html" class="hover:text-yellow-200 transition">FAQ</a>
       <a href="login.html" class="bg-white text-orange-600 font-semibold px-4 py-1 rounded-full hover:bg-gray-100 transition">Login</a>
       <a href="register.html" class="bg-yellow-400 text-orange-900 font-semibold px-4 py-1 rounded-full hover:bg-yellow-500 transition">Sign Up</a>
-      <!-- Profile button -->
-      <a href="profile.html" class="ml-2 flex items-center justify-center w-10 h-10 rounded-full bg-orange-500 text-white font-bold shadow-md hover:bg-orange-600 hover:scale-105 transition transform">
-        <i data-feather="user"></i>
-      </a>
+
+      
+<!-- Profile button -->
+<a href="profile.html" class="ml-2 flex items-center justify-center w-10 h-10 rounded-full bg-orange-500 text-white font-bold shadow-md hover:bg-orange-600 hover:scale-105 transition transform">
+  <i data-feather="user"></i>
+</a>
+
     </div>
+
     <!-- Mobile menu button -->
     <button class="md:hidden focus:outline-none" id="mobile-menu-button">
       <i data-feather="menu"></i>
@@ -68,68 +73,32 @@
       <a href="login.html" class="hover:text-yellow-200 transition">Login</a>
       <a href="register.html" class="hover:text-yellow-200 transition">Sign Up</a>
       <a href="profile.html" class="hover:text-yellow-200 transition flex items-center">
-        <i data-feather="user" class="mr-2"></i> Profile
+        <img src="http://static.photos/people/200x200/1" alt="Profile" class="w-8 h-8 rounded-full mr-2 object-cover"> Profile
       </a>
     </div>
   </div>
 </nav>
 
+
 <!-- Hero Section -->
-<section id="home" class="hero-bg h-[80vh] sm:h-[90vh] flex items-center justify-center text-white relative overflow-hidden">
+<section id="home" class="hero-bg h-screen flex items-center justify-center text-white relative overflow-hidden">
   <div class="absolute inset-0 bg-black/30 z-10"></div>
   <div class="text-center px-4 z-20 animate__animated animate__fadeIn animate__delay-1s">
-    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
-      Taste happiness at your doorstep
-    </h1>
-    <p class="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 drop-shadow-lg">Delicious food, delivered fast</p>
-    <a href="order.html" class="bg-yellow-400 hover:bg-yellow-500 text-orange-900 font-bold py-3 px-6 sm:px-8 rounded-full text-lg md:text-xl transition duration-300 inline-block hover:scale-105 transform">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Taste happiness at your doorstep</h1>
+    <p class="text-xl md:text-2xl mb-8 drop-shadow-lg">Delicious food, delivered fast</p>
+    <a href="order.html" class="bg-yellow-400 hover:bg-yellow-500 text-orange-900 font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block hover:scale-105 transform">
       Order Now <i data-feather="arrow-right" class="inline ml-2 w-5 h-5"></i>
     </a>
   </div>
 </section>
 
 <!-- Search Section -->
-<section class="bg-gradient-to-r from-orange-50 to-amber-50 py-12 animate-on-scroll">
-  <div class="max-w-xl mx-auto px-4 relative">
-    <input type="text" placeholder="Search for your favorite dish..." class="w-full py-4 px-6 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-orange-400">
-    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition">
-      <i data-feather="search"></i>
-    </button>
-  </div>
-</section>
 
-<!-- Promotions / Offers Section -->
-<section class="bg-orange-100 py-6 animate-on-scroll">
-  <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-    <!-- Offer 1 -->
-    <div class="flex flex-col md:flex-row items-center justify-between rounded-lg bg-gradient-to-r from-orange-300 to-yellow-200 shadow-md p-4">
-      <div class="flex items-center mb-4 md:mb-0 space-x-4">
-        <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" class="w-12 h-12" alt="Pizza Icon">
-        <div>
-          <h2 class="text-xl md:text-2xl font-bold text-orange-800">🔥 Special Pizza Offer!</h2>
-          <p class="text-orange-900 text-sm md:text-base">Get 20% off on all pizzas this week. Order now and enjoy!</p>
-        </div>
-      </div>
-      <a href="order.html" class="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-full transition duration-300 mt-3 md:mt-0">Order Now</a>
-    </div>
 
-    <!-- Offer 2 -->
-    <div class="flex flex-col md:flex-row items-center justify-between rounded-lg bg-gradient-to-r from-yellow-200 to-orange-300 shadow-md p-4">
-      <div class="flex items-center mb-4 md:mb-0 space-x-4">
-        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" class="w-12 h-12" alt="Burger Icon">
-        <div>
-          <h2 class="text-xl md:text-2xl font-bold text-orange-800">🍔 Burger Combo Deal!</h2>
-          <p class="text-orange-900 text-sm md:text-base">Buy 1 get 1 free on all burger combos. Limited time offer!</p>
-        </div>
-      </div>
-      <a href="order.html" class="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-full transition duration-300 mt-3 md:mt-0">Order Now</a>
-    </div>
-  </div>
-</section>
 
 <!-- Menu Section -->
 <section id="menu" class="py-16 bg-white animate-on-scroll" x-data="{ activeCategory: 'all' }">
-  <div class="max-w-7xl mx-auto px-4">
+  <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-6 text-orange-700">Explore Our Menu</h2>
     <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Discover delicious meals crafted with love and premium ingredients</p>
 
@@ -137,85 +106,135 @@
       <div class="flex space-x-2 md:space-x-4">
         <template x-for="category in ['all','pizza','burger','pasta','salad']">
           <button @click="activeCategory = category"
-                  :class="{'bg-orange-600 text-white': activeCategory === category, 'bg-white text-orange-600': activeCategory !== category}"
-                  class="px-4 py-2 rounded-full border border-orange-600 font-medium transition-all whitespace-nowrap capitalize"
-                  x-text="category === 'all' ? 'All Items' : category + 's'"></button>
+            :class="{'bg-orange-600 text-white': activeCategory === category, 'bg-white text-orange-600': activeCategory !== category}"
+            class="px-4 py-2 rounded-full border border-orange-600 font-medium transition-all whitespace-nowrap capitalize"
+            x-text="category === 'all' ? 'All Items' : category + 's'"></button>
         </template>
       </div>
     </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      <!-- Dish 1 -->
-      <div class="dish-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class="relative">
-          <img src="http://static.photos/food/640x360/1" alt="Margherita Pizza" class="w-full h-48 object-cover">
-          <span class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full">Popular</span>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Margherita Pizza</h3>
-          <p class="text-gray-600 mb-4 text-sm">Classic tomato sauce, mozzarella, and fresh basil</p>
-          <div class="flex justify-between items-center">
-            <span class="text-orange-600 font-bold text-lg">$12.99</span>
-            <button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-full transition flex items-center">
-              <i data-feather="shopping-cart" class="mr-1 w-4 h-4"></i> Add
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dish 2 -->
-      <div class="dish-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class="relative">
-          <img src="http://static.photos/food/640x360/2" alt="Cheeseburger Deluxe" class="w-full h-48 object-cover">
-          <span class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full">New</span>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Cheeseburger Deluxe</h3>
-          <p class="text-gray-600 mb-4 text-sm">Juicy beef patty, cheddar cheese, lettuce, tomato, and special sauce</p>
-          <div class="flex justify-between items-center">
-            <span class="text-orange-600 font-bold text-lg">$10.99</span>
-            <button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-full transition flex items-center">
-              <i data-feather="shopping-cart" class="mr-1 w-4 h-4"></i> Add
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dish 3 -->
-      <div class="dish-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class="relative">
-          <img src="http://static.photos/food/640x360/3" alt="Pasta Carbonara" class="w-full h-48 object-cover">
-          <span class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full">Chef's Choice</span>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Pasta Carbonara</h3>
-          <p class="text-gray-600 mb-4 text-sm">Creamy sauce with pancetta, parmesan, and freshly cracked black pepper</p>
-          <div class="flex justify-between items-center">
-            <span class="text-orange-600 font-bold text-lg">$11.99</span>
-            <button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-full transition flex items-center">
-              <i data-feather="shopping-cart" class="mr-1 w-4 h-4"></i> Add
-            </button>
-          </div>
-        </div>
-      </div>
-
+<!-- Search Section -->
+<section class="bg-gradient-to-r from-orange-50 to-amber-50 py-12 animate-on-scroll">
+  <div class="container mx-auto px-4">
+    <div class="max-w-2xl mx-auto relative">
+      <input id="dish-search" type="text" placeholder="Search for your favorite dish..." 
+             class="w-full py-4 px-6 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-orange-400 text-gray-700">
+      <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition">
+        <i data-feather="search"></i>
+      </button>
     </div>
   </div>
 </section>
 
-<!-- About Us -->
+<script>
+  // Dynamic Dish Search
+  document.addEventListener('DOMContentLoaded', () => {
+    feather.replace(); // Feather icons
+    const searchInput = document.getElementById('dish-search');
+    const dishCards = document.querySelectorAll('.dish-card');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      dishCards.forEach(card => {
+        const dishName = card.querySelector('h3').textContent.toLowerCase();
+        if (dishName.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+  <!-- Dish 1 -->
+  <div class="dish-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+    <div class="relative">
+      <img src="http://static.photos/food/640x360/1" alt="Margherita Pizza" class="w-full h-48 object-cover">
+      <span class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full">Popular</span>
+    </div>
+    <div class="p-6">
+      <h3 class="text-xl font-bold mb-2">Margherita Pizza</h3>
+      <p class="text-gray-600 mb-4 text-sm">Classic tomato sauce, mozzarella, and fresh basil</p>
+      <div class="flex justify-between items-center">
+        <span class="text-orange-600 font-bold text-lg">$12.99</span>
+        <button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-full transition flex items-center">
+          <i data-feather="shopping-cart" class="mr-1 w-4 h-4"></i> Add
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dish 2 -->
+  <div class="dish-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+    <div class="relative">
+      <img src="http://static.photos/food/640x360/2" alt="Cheeseburger Deluxe" class="w-full h-48 object-cover">
+      <span class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full">New</span>
+    </div>
+    <div class="p-6">
+      <h3 class="text-xl font-bold mb-2">Cheeseburger Deluxe</h3>
+      <p class="text-gray-600 mb-4 text-sm">Juicy beef patty, cheddar cheese, lettuce, tomato, and special sauce</p>
+      <div class="flex justify-between items-center">
+        <span class="text-orange-600 font-bold text-lg">$10.99</span>
+        <button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-full transition flex items-center">
+          <i data-feather="shopping-cart" class="mr-1 w-4 h-4"></i> Add
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dish 3 -->
+  <div class="dish-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+    <div class="relative">
+      <img src="http://static.photos/food/640x360/3" alt="Pasta Carbonara" class="w-full h-48 object-cover">
+      <span class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full">Chef's Choice</span>
+    </div>
+    <div class="p-6">
+      <h3 class="text-xl font-bold mb-2">Pasta Carbonara</h3>
+      <p class="text-gray-600 mb-4 text-sm">Creamy sauce with pancetta, parmesan, and freshly cracked black pepper</p>
+      <div class="flex justify-between items-center">
+        <span class="text-orange-600 font-bold text-lg">$11.99</span>
+        <button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-full transition flex items-center">
+          <i data-feather="shopping-cart" class="mr-1 w-4 h-4"></i> Add
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-16 bg-gradient-to-r from-orange-50 to-amber-50 animate-on-scroll">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-orange-700">What Our Customers Say</h2>
+    <div class="flex overflow-x-auto space-x-6 pb-6 scrollbar-hide">
+      <div class="testimonial-card flex-shrink-0 bg-white rounded-lg shadow-md p-6 w-80">
+        <div class="flex items-center mb-4">
+          <img src="http://static.photos/people/200x200/1" alt="Sarah J." class="w-12 h-12 rounded-full mr-4">
+          <div><h4 class="font-semibold">Sarah J.</h4></div>
+        </div>
+        <p class="text-gray-600">"The pizza arrived hot and fresh! Will definitely order again."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us Section -->
 <section id="about" class="py-16 bg-white relative animate-on-scroll">
   <div class="absolute inset-0 bg-[url('https://static.photos/food/1200x630/5')] bg-cover bg-center opacity-5"></div>
   <div class="relative z-10">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-      <div class="md:w-1/2">
-        <img src="http://static.photos/restaurant/640x360/1" alt="Our Restaurant" class="rounded-lg shadow-lg w-full">
-      </div>
-      <div class="md:w-1/2">
-        <h2 class="text-3xl font-bold mb-6 text-orange-700">About FoodFiesta</h2>
-        <p class="text-gray-600 mb-4">Founded in 2015, FoodFiesta has been serving delicious meals with passion and dedication.</p>
-        <p class="text-gray-600 mb-4">We use only the freshest ingredients and traditional recipes to bring authentic flavors to your table.</p>
-        <p class="text-gray-600">Our team of professional chefs and friendly staff are committed to providing you with an exceptional dining experience.</p>
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+          <img src="http://static.photos/restaurant/640x360/1" alt="Our Restaurant" class="rounded-lg shadow-lg w-full">
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold mb-6 text-orange-700">About FoodFiesta</h2>
+          <p class="text-gray-600 mb-4">Founded in 2015, FoodFiesta has been serving delicious meals with passion and dedication.</p>
+          <p class="text-gray-600 mb-4">We use only the freshest ingredients and traditional recipes to bring authentic flavors to your table.</p>
+          <p class="text-gray-600">Our team of professional chefs and friendly staff are committed to providing you with an exceptional dining experience.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -223,41 +242,43 @@
 
 <!-- Footer -->
 <footer class="bg-orange-800 text-white py-12 animate-on-scroll">
-  <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-    <div>
-      <h3 class="text-xl font-bold mb-4 flex items-center">
-        <i data-feather="coffee" class="text-yellow-300 mr-2"></i> FoodFiesta
-      </h3>
-      <p class="text-orange-100">Delicious food delivered fast to your doorstep.</p>
-    </div>
-    <div>
-      <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-      <ul class="space-y-2">
-        <li><a href="#home" class="text-orange-200 hover:text-white transition">Home</a></li>
-        <li><a href="#menu" class="text-orange-200 hover:text-white transition">Menu</a></li>
-        <li><a href="#about" class="text-orange-200 hover:text-white transition">About Us</a></li>
-        <li><a href="contact.html" class="text-orange-200 hover:text-white transition">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-      <ul class="space-y-2">
-        <li class="flex items-center"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i> 123 Food St, City</li>
-        <li class="flex items-center"><i data-feather="phone" class="mr-2 w-4 h-4"></i> (123) 456-7890</li>
-        <li class="flex items-center"><i data-feather="mail" class="mr-2 w-4 h-4"></i> info@foodfiesta.com</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
-      <div class="flex space-x-4">
-        <a href="#" class="text-orange-200 hover:text-white transition"><i data-feather="facebook"></i></a>
-        <a href="#" class="text-orange-200 hover:text-white transition"><i data-feather="instagram"></i></a>
-        <a href="#" class="text-orange-200 hover:text-white transition"><i data-feather="twitter"></i></a>
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4 flex items-center">
+          <i data-feather="coffee" class="text-yellow-300 mr-2"></i> FoodFiesta
+        </h3>
+        <p class="text-orange-100">Delicious food delivered fast to your doorstep.</p>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#home" class="text-orange-200 hover:text-white transition">Home</a></li>
+          <li><a href="#menu" class="text-orange-200 hover:text-white transition">Menu</a></li>
+          <li><a href="#about" class="text-orange-200 hover:text-white transition">About Us</a></li>
+          <li><a href="contact.html" class="text-orange-200 hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+        <ul class="space-y-2">
+          <li class="flex items-center"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i> 123 Food St, City</li>
+          <li class="flex items-center"><i data-feather="phone" class="mr-2 w-4 h-4"></i> (123) 456-7890</li>
+          <li class="flex items-center"><i data-feather="mail" class="mr-2 w-4 h-4"></i> info@foodfiesta.com</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+        <div class="flex space-x-4">
+          <a href="#" class="text-orange-200 hover:text-white transition"><i data-feather="facebook"></i></a>
+          <a href="#" class="text-orange-200 hover:text-white transition"><i data-feather="instagram"></i></a>
+          <a href="#" class="text-orange-200 hover:text-white transition"><i data-feather="twitter"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="border-t border-orange-700 mt-8 pt-8 text-center text-orange-200">
-    <p>&copy; 2025 FoodFiesta. All rights reserved.</p>
+    <div class="border-t border-orange-700 mt-8 pt-8 text-center text-orange-200">
+      <p>&copy; 2025 FoodFiesta. All rights reserved.</p>
+    </div>
   </div>
 </footer>
 
@@ -282,6 +303,15 @@
     };
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll();
+  });
+
+  // FAQ toggle
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      answer.classList.toggle('hidden');
+      btn.querySelector('i').classList.toggle('rotate-180');
+    });
   });
 </script>
 
