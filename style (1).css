@@ -1,0 +1,93 @@
+/* === FoodFiesta Enhancements === */
+
+/* Buttons */
+button {
+  background-color: #f97316; /* Tailwind orange-500 */
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: #ea580c; /* darker orange */
+  transform: scale(1.03);
+}
+
+/* Form styling */
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+form label {
+  display: block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.3rem;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  font-size: 15px;
+  transition: border-color 0.2s ease;
+}
+form input:focus,
+form textarea:focus {
+  border-color: #f97316;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+}
+
+/* Popup (SweetAlert2 custom) */
+.swal2-popup {
+  border-radius: 16px !important;
+  font-family: 'Poppins', sans-serif;
+}
+.swal2-title {
+  color: #f97316 !important;
+  font-weight: 700;
+}
+.swal2-confirm {
+  background-color: #f97316 !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 1.2rem !important;
+}
+
+/* Cards & layout enhancements */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  form {
+    padding: 1.2rem;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+.card p:last-child {
+	margin-bottom: 0;
+}
